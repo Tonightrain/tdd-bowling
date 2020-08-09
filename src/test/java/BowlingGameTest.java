@@ -31,5 +31,12 @@ public class BowlingGameTest {
         assertEquals(103,result);
     }
 
+    @Test
+    void should_return_94_when_time_of_10_add_less_than_10(){
+        int[] scores = {1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,1,2};
+        int result = bowlingGame.sum(scores);
+        assertEquals(94,result);
+    }
+
 
 }
