@@ -44,4 +44,22 @@ public class BowlingGame {
         }
         return score;
     }
+
+//    int[] scores={10,10,10,10,10,10,10,10,10,10,10,10,10};
+//    BowlingGame bowlingGame=new BowlingGame();
+//        for (int i = 0; i < scores.length; i++) {
+//        bowlingGame.add(scores[i]);
+//    }
+//    int result = bowlingGame.scoreForFrame(10);
+    public int sum(int[] score){
+        BowlingGame bowlingGame = new BowlingGame();
+        if (score.length ==0||score ==null){
+            throw new RuntimeException();
+        }
+        for (int i = 0; i < score.length; i++) {
+            bowlingGame.add(score[i]);
+        }
+        int sum = bowlingGame.scoreForFrame(10);
+        return sum;
+    }
 }
