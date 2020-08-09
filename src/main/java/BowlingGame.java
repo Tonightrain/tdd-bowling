@@ -1,10 +1,6 @@
-import java.util.Arrays;
-import java.util.List;
-
 public class BowlingGame {
     int[] bowlingScore = new int[22];
     int ball=0;
-    int score;//分数
     int count=0;
     boolean firstThrow=true;
     public void add(int grade){
@@ -31,7 +27,7 @@ public class BowlingGame {
         for(int count=0;count<frame;count++){
             int firstThrow = bowlingScore[ball++];
             if(firstThrow==10){
-                score= score+10+bowlingScore[ball]+bowlingScore [ball+1];
+                score= score+10+bowlingScore[ball]+bowlingScore[ball+1];
             }else{
                 int secondThrow = bowlingScore[ball++];
                 int framScore = firstThrow+secondThrow;
@@ -45,12 +41,6 @@ public class BowlingGame {
         return score;
     }
 
-//    int[] scores={10,10,10,10,10,10,10,10,10,10,10,10,10};
-//    BowlingGame bowlingGame=new BowlingGame();
-//        for (int i = 0; i < scores.length; i++) {
-//        bowlingGame.add(scores[i]);
-//    }
-//    int result = bowlingGame.scoreForFrame(10);
     public int sum(int[] score){
         BowlingGame bowlingGame = new BowlingGame();
         if (score.length ==0||score ==null){

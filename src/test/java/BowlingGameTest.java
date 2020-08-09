@@ -38,5 +38,4 @@ public class BowlingGameTest {
         assertEquals(94,result);
     }
 
-
 }
