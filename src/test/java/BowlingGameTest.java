@@ -24,5 +24,12 @@ public class BowlingGameTest {
         assertThrows(RuntimeException.class,()-> bowlingGame.sum(scores));
     }
 
+    @Test
+    void should_return_103_when_time_of_10_add_is_10(){
+        int[] scores = {1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,1,2,2};
+        int result = bowlingGame.sum(scores);
+        assertEquals(103,result);
+    }
+
 
 }
